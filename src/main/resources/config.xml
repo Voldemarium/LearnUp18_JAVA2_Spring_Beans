@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="logger" class="Logger">
+        <constructor-arg value="[DEBUG]"/>
+    </bean>
+
+    <bean id="db" class="Database">
+       <constructor-arg ref="logger"/>  <!--зависимость от bean "logger"-->
+    </bean>
+
+    <bean id="authservice" class="AuthService">
+        <constructor-arg ref="db"/>    <!--зависимость от bean "db"-->
+    </bean>
+
+    <bean id="userservice" class="UserService">
+        <constructor-arg ref="logger"/>
+        <constructor-arg ref="db"/>
+        <constructor-arg ref="authservice"/>
+    </bean>
+
+</beans>
