@@ -1,3 +1,5 @@
+import logging.Logger;
+
 public class Database {
 
     private final Logger logger;

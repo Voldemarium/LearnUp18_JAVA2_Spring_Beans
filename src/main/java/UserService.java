@@ -1,3 +1,5 @@
+import logging.Logger;
+
 public class UserService {
 
     private final Logger logger;

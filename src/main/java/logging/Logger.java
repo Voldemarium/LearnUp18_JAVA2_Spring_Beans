@@ -1,3 +1,5 @@
+package logging;
+
 public class Logger {
 
     public final String prefix;

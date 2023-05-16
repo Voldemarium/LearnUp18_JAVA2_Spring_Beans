@@ -3,22 +3,38 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="logger" class="Logger">
-        <constructor-arg value="[DEBUG]"/>
+    <bean id="logger" class="logging.Logger">
+        <constructor-arg value="[DEBUG]"/>    <!--значение своего аргумента поля-->
     </bean>
 
     <bean id="db" class="Database">
        <constructor-arg ref="logger"/>  <!--зависимость от bean "logger"-->
     </bean>
 
-    <bean id="authservice" class="AuthService">
+    <bean id="authService" class="AuthService">
         <constructor-arg ref="db"/>    <!--зависимость от bean "db"-->
     </bean>
 
-    <bean id="userservice" class="UserService">
+    <bean id="userService" class="UserService">
         <constructor-arg ref="logger"/>
         <constructor-arg ref="db"/>
-        <constructor-arg ref="authservice"/>
+        <constructor-arg ref="authService"/>
+    </bean>
+
+    <bean id="a" class="A">
+        <property name="logger" ref="logger"></property>
+    </bean>
+
+    <bean id="myService" class="MyService">
+        <constructor-arg  value="Injected value"/>
+        <constructor-arg>
+            <list>
+                <value>Ivan</value>
+                <value>Oleg</value>
+                <value>Petr</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg ref="logger"/>
     </bean>
 
 </beans>
