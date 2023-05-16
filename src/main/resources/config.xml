@@ -3,12 +3,17 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="logger" class="logging.Logger">
+    <bean id="consoleLogger" class="logging.ConsoleLogger">
         <constructor-arg value="[DEBUG]"/>    <!--значение своего аргумента поля-->
     </bean>
 
+    <bean id="fileLogger" class="logging.FileLogger">
+        <constructor-arg value="[DEBUG]"/>
+        <constructor-arg value="app.log"/>
+    </bean>
+
     <bean id="db" class="Database">
-       <constructor-arg ref="logger"/>  <!--зависимость от bean "logger"-->
+       <constructor-arg ref="consoleLogger"/>  <!--зависимость от bean "logger"-->
     </bean>
 
     <bean id="authService" class="AuthService">
@@ -16,13 +21,13 @@
     </bean>
 
     <bean id="userService" class="UserService">
-        <constructor-arg ref="logger"/>
+        <constructor-arg ref="consoleLogger"/>
         <constructor-arg ref="db"/>
         <constructor-arg ref="authService"/>
     </bean>
 
     <bean id="a" class="A">
-        <property name="logger" ref="logger"></property>
+        <property name="logger" ref="consoleLogger"></property>
     </bean>
 
     <bean id="myService" class="MyService">
@@ -34,7 +39,12 @@
                 <value>Petr</value>
             </list>
         </constructor-arg>
-        <constructor-arg ref="logger"/>
+        <constructor-arg>
+            <list>
+                <ref bean="consoleLogger"/>
+                <ref bean="fileLogger"/>
+            </list>
+        </constructor-arg>
     </bean>
 
 </beans>

@@ -6,17 +6,17 @@ import java.util.List;
 public class MyService {
 	private final String value;
 	private final List<String> names;
-	private final Logger logger;
+	private final List<Logger> loggers;
 
 
-	public MyService(String value, List<String> names, Logger logger) {
+	public MyService(String value, List<String> names, List<Logger> loggers) {
 		this.value = value;
 		this.names = names;
-		this.logger = logger;
+		this.loggers = loggers;
 	}
 
 	public void doWork() {
-		logger.log("value = " + value);
-		names.forEach(logger :: log);  //распечатка объектов List names логгером logging.Logger logger
+		loggers.forEach(l -> l.log("value = " + value));
+		names.forEach(n -> loggers.forEach(l -> l.log(n)));  //распечатка объектов List<String> names логгерами
 	}
 }
