@@ -31,3 +31,66 @@ Log: [DEBUG] Ivan
 Log: [DEBUG] Oleg
 Log: [DEBUG] Petr
 Log: [DEBUG] handled event: event.TestEvent[source=EventData(createAt=2023-05-17T10:13:13.703226430, title=Event, details=My first event)]
+Log: [DEBUG] value = Injected value
+Log: [DEBUG] Ivan
+Log: [DEBUG] Oleg
+Log: [DEBUG] Petr
+Log: [DEBUG] value = Injected value
+Log: [DEBUG] Ivan
+Log: [DEBUG] Oleg
+Log: [DEBUG] Petr
+Log: [DEBUG] handled event: event.TestEvent[source=EventData(createAt=2023-05-17T10:54:43.140359595, title=Event, details=My first event)]
+Log: [DEBUG] value = Injected value
+Log: [DEBUG] Ivan
+Log: [DEBUG] Oleg
+Log: [DEBUG] Petr
+Log: [DEBUG] value = Injected value
+Log: [DEBUG] Ivan
+Log: [DEBUG] Oleg
+Log: [DEBUG] Petr
+Log: [DEBUG] handled event: event.TestEvent[source=EventData(createAt=2023-05-17T10:56:26.227090227, title=Event, details=My first event)]
+Log: [DEBUG] value = Injected value
+Log: [DEBUG] Ivan
+Log: [DEBUG] Oleg
+Log: [DEBUG] Petr
+Log: [DEBUG] value = Injected value
+Log: [DEBUG] Ivan
+Log: [DEBUG] Oleg
+Log: [DEBUG] Petr
+Log: [DEBUG] handled event: event.TestEvent[source=EventData(createAt=2023-05-17T10:57:34.589814284, title=Event, details=My first event)]
+Log: [DEBUG] value = Injected value
+Log: [DEBUG] Ivan
+Log: [DEBUG] Oleg
+Log: [DEBUG] Petr
+Log: [DEBUG] value = Injected value
+Log: [DEBUG] Ivan
+Log: [DEBUG] Oleg
+Log: [DEBUG] Petr
+Log: [DEBUG] handled event: event.TestEvent[source=EventData(createAt=2023-05-17T11:03:00.105042383, title=Event, details=My first event)]
+Log: [DEBUG] value = Injected value
+Log: [DEBUG] Ivan
+Log: [DEBUG] Oleg
+Log: [DEBUG] Petr
+Log: [DEBUG] value = Injected value
+Log: [DEBUG] Ivan
+Log: [DEBUG] Oleg
+Log: [DEBUG] Petr
+Log: [DEBUG] handled event: event.TestEvent[source=EventData(createAt=2023-05-17T11:07:33.778399861, title=Event, details=My first event)]
+Log: [DEBUG] value = Injected value
+Log: [DEBUG] Ivan
+Log: [DEBUG] Oleg
+Log: [DEBUG] Petr
+Log: [DEBUG] value = Injected value
+Log: [DEBUG] Ivan
+Log: [DEBUG] Oleg
+Log: [DEBUG] Petr
+Log: [DEBUG] handled event: event.TestEvent[source=EventData(createAt=2023-05-17T11:09:20.359651292, title=Event, details=My first event)]
+Log: [DEBUG] value = Injected value
+Log: [DEBUG] Ivan
+Log: [DEBUG] Oleg
+Log: [DEBUG] Petr
+Log: [DEBUG] value = Injected value
+Log: [DEBUG] Ivan
+Log: [DEBUG] Oleg
+Log: [DEBUG] Petr
+Log: [DEBUG] handled event: event.TestEvent[source=EventData(createAt=2023-05-17T11:09:43.332057319, title=Event, details=My first event)]

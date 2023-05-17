@@ -1,13 +1,16 @@
 import event.TestEvent;
 import logging.ConsoleLogger;
-import logging.Logger;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 public class Main {
     public static void main(String[] args) {
 
         ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
+
         UserService userService = context.getBean(UserService.class);
         userService.isUserAuth(new User("Ivanov", "Ivan12", "123124"));
 
@@ -26,5 +29,14 @@ public class Main {
 
         context.publishEvent(TestEvent.of("Event", "My first event"));
 
+        ResourceBundle resourceDefault = ResourceBundle.getBundle("text");
+        String sDefault = resourceDefault.getString("startToWork");
+        logger.log(sDefault);
+        ResourceBundle resourceUS = ResourceBundle.getBundle("text", Locale.US);
+        String sUS = resourceUS.getString("startToWork");
+        logger.log(sUS);
+
+        logger.log(context.getMessage("startToWork", null, Locale.getDefault()));
+        logger.log(context.getMessage("startToWork", null, Locale.US));
     }
 }
