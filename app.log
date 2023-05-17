@@ -22,3 +22,12 @@ Log: [DEBUG] value = Injected value
 Log: [DEBUG] Ivan
 Log: [DEBUG] Oleg
 Log: [DEBUG] Petr
+Log: [DEBUG] value = Injected value
+Log: [DEBUG] Ivan
+Log: [DEBUG] Oleg
+Log: [DEBUG] Petr
+Log: [DEBUG] value = Injected value
+Log: [DEBUG] Ivan
+Log: [DEBUG] Oleg
+Log: [DEBUG] Petr
+Log: [DEBUG] handled event: event.TestEvent[source=EventData(createAt=2023-05-17T10:13:13.703226430, title=Event, details=My first event)]

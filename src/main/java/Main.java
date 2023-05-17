@@ -1,3 +1,4 @@
+import event.TestEvent;
 import logging.ConsoleLogger;
 import logging.Logger;
 import org.springframework.context.ApplicationContext;
@@ -22,6 +23,8 @@ public class Main {
 
         A a = context.getBean(A.class);
         a.doWork();
+
+        context.publishEvent(TestEvent.of("Event", "My first event"));
 
     }
 }
